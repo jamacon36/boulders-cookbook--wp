@@ -1,0 +1,15 @@
+{% extends "archive/archive.twig" %}
+
+{% block topBar %}
+  <div class="background">
+    <div class="danish-container">
+      <div class="grid">
+        <div class="grid-1of1">
+          <p>{{ title }}</p>
+          <p>{{ count }}</p>
+          {% include 'partials/searchform.twig' %}
+        </div>      
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% macro add_attributes(attributes) %}
+    {% if attributes %}
+        {% for attribute in attributes %}
+            data-filter-{{ attribute.name }}="{{ attribute.value }}"
+        {% endfor %}
+    {% endif %}
+{% endmacro %}
+{% macro add_danish_map (obj)%}
+    data-danish-map-name="{{ obj.danish_map_marker_name }}" data-danish-map-address="{{  obj.danish_map_marker_address}}" data-danish-map-phone="{{obj.danish_map_marker_phone_number}}" data-danish-map-lat="{{obj.danish_map_location.lat}}" data-danish-map-lng="{{obj.danish_map_location.lng}}"
+{% endmacro %}

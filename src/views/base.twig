@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
+
+  <head>{% include 'partials/head.twig' %}</head>
+  <body class="{{body_class}} page_{{ post.slug|replace('-','_') }} theme-default {{post.post_type}}{% block extra_body_classes %}{% endblock %}{% if check_query_args('login') == 'failed' or check_query_args('cell-line-transfer') %} u-scroll-lock{% endif %}{% if post.slug == 'shop-products' %} page-template-storefront{% endif %}" data-template="base.twig" id="post-{{post.ID}}">
+    {% include 'partials/header.twig' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'partials/footer.twig' %}
+    
+  </body>
+</html>

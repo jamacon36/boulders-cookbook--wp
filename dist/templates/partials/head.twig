@@ -1,0 +1,10 @@
+<meta charset="{{site.charset}}" />
+<title>{% if wp_title %}{{ wp_title }}{% elseif page_title %}{{page_title}}{% else %}{{ site.name }}{% endif %}</title>
+<meta name="description" content="{% if page_description %}{{page_description}}{% else %}{{site.description}}{% endif %}">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="pingback" href="{{site.pingback_url}}" />
+<base href="{{ site.url }}/">
+{{function('wp_head')}}
+{% include 'partials/header-scripts.twig' %}

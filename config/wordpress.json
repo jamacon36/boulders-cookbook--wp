@@ -1,0 +1,10 @@
+{
+  "wordpress": {
+    "MYSQL_DATABASE_NAME": "",
+    "MYSQL_USER_NAME": "wordpress",
+    "MYSQL_USER_PASSWORD": "wordpress",
+    "MYSQL_ROOT_PASSWORD": "wordpress",
+    "wordpress_port": 8000,
+    "wordpress_phpmyadmin_port": 8181
+  }
+}

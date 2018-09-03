@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  {% block topBar %}
+  {% endblock %}
+
+  <div class="background--light-blue">
+    <div class="danish-container u-paddingTop2--large u-paddingBtm2--large">
+      <p>{{ title }}</p>
+      <p>{{ count }} post{% if count > 1 %}s{% endif %} found</p>
+      <h1 class="thin-h2 u-center">{{ term.name }}</h1>
+      <div class="tease-text">{{post.character.origin_story | truncate(100)}}</div>
+
+      {% for post in posts %}
+        {% include "partials/tease.twig" %}
+      {% endfor %}
+
+      {% include "partials/pagination.twig" %}
+    </div>
+  </div>
+{% endblock %}

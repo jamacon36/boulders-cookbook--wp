@@ -17,3 +17,11 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+server
+.data
+.idea
+vendor
+!/dist/vendor
+node_modules
+.DS_Store
+.vscode

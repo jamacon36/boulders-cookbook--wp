@@ -1,0 +1,21 @@
+<div class="tease">
+  <div class="grid">
+    {% if post.thumbnail.src %}
+      <div class="grid-1of4--large">
+        <div class="tease-image">
+            <img src="{{post.thumbnail.src}}" />
+        </div>
+      </div>
+    {% endif %}
+    <div {% if post.thumbnail.src %}class="grid-3of4--large"{% endif %}>
+      <div class="tease-content">
+        <h2 class="tease-tite type-medium"><a href="{{post.link}}">{{post.title}}</a></h2>
+        <div class="tease-meta">
+          <span class="type-xsmall">{{ post.date }}</span>
+        </div>
+        <p class="tease-excerpt">{{ post.get_preview(25) }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
