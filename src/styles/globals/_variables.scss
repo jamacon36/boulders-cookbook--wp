@@ -5,3 +5,22 @@ $theme-mint: rgba(153, 213, 201, 1);
 $theme-brown: rgba(72, 64, 65, 1);
 $theme-purple: rgba(67, 67, 113, 1);
 $theme-rose: rgba(234, 82, 111, 1);
+
+// Grid
+$grid-columns: 12;
+
+// Breakpoints
+$breakpoints: (
+	monitor-cinema: ( breakpoint: "(min-width: 3200px)" ),
+	monitor-tele: ( breakpoint: "(min-width: 1800px)" ),
+	notebook-large: (breakpoint: "(max-width: 1199px)" ),
+	notebook-small: (breakpoint: "(max-width: 949px)" ),
+	tablet-large: (breakpoint: "(max-width: 849px)" ),
+	tablet-small: (breakpoint: "(max-width: 749px)" ),
+	palm: (breakpoint: "(max-width: 540px)" ),
+	phone: (breakpoint: "(max-width: 420px)" )
+);
+
+// Containers
+$narrow-container-width: 75%;
+$container-width: 85%;

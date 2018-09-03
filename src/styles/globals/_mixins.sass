@@ -1,0 +1,11 @@
+@function get-key($object, $key)
+	@if map-has-key($object, $key)
+    	@return map-get($object, $key)
+	@warn "Unknown `#{$key}` in $object."
+	@return null
+    
+@mixin  media($bp)
+	@each $key, $value in $breakpoints
+		@if $key == $bp
+			@media #{get-key($value, 'breakpoint')}
+			@content
