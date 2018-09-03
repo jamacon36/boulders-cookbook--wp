@@ -1,4 +1,4 @@
-import "babel-polyfill";
+import 'babel-polyfill'
 import Pollyfills from './includes/polyfills.js'
 import Utilities from './includes/utilities.js'
 

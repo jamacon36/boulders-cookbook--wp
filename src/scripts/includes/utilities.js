@@ -232,7 +232,7 @@ class Utilities {
             const inputs = form.getElementsByClassName('invalid')
             for (let i = 0; i < inputs.length; i++) {
                 const input = inputs[i]
-                form.querySelector(`label[for="${input.name}"]`).innerText = ""
+                form.querySelector(`label[for="${input.name}"]`).innerText = ''
                 input.classList.remove('invalid')
             }
         }
