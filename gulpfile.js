@@ -21,7 +21,6 @@ const browserSync = require('browser-sync')
 const browserify = require('browserify')
 const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
-const ftp = require('vinyl-ftp')
 const globby = require('globby')
 const through = require('through2')
 const path = require('path')
@@ -67,22 +66,7 @@ gulp.task('styles', function () {
 gulp.task('eslint', function () {
     let paths = config.paths.js
     return gulp.src(paths.src)
-        .pipe(eslint({
-            'fix': true,
-            'extends': 'airbnb',
-            'env': {
-                'browser': true,
-                'node': true
-            },
-            'parserOptions': {
-                'ecmaVersion': 6,
-                'sourceType': 'module'
-            },
-            'rules': {
-                'no-console': 1,
-                'no-unused-vars': 1
-            }
-        }))
+        .pipe(eslint())
         .pipe(eslint.format())
 })
 // Scripts
