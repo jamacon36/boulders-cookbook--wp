@@ -1,3 +1,16 @@
-<header class="row" id="navigation">
-    
+<header id="site-nav">
+    <div class="container">
+        <div class="grid">
+            <div class="grid-1of4">
+                <a href="/">
+                    <span class="header">The Boulders Cookbook</span>
+                </a>
+            </div>
+            <div class="grid-3of4">
+                <nav>
+                    {% include "partials/menu.twig" with {'menu': primary_menu.get_items} %}
+                </nav>
+            </div>
+        </div>
+    </div>
 </header>

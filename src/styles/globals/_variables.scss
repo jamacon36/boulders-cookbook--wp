@@ -1,10 +1,11 @@
 // Colors
 $theme-black: rgba(0, 8, 7, 1);
 $theme-white: #fff;
-$theme-mint: rgba(153, 213, 201, 1);
-$theme-brown: rgba(72, 64, 65, 1);
-$theme-purple: rgba(67, 67, 113, 1);
-$theme-rose: rgba(234, 82, 111, 1);
+$theme-green: #83B692;
+$theme-dark-green: #012622;
+$theme-brown: #393D3F;
+$theme-indigo: #2B4141;
+$theme-rose: #EA526F;
 
 // Grid
 $grid-columns: 12;
@@ -24,3 +25,8 @@ $breakpoints: (
 // Containers
 $narrow-container-width: 75%;
 $container-width: 85%;
+
+// Fonts
+$default-font-size: 1.2rem;
+$header-font: 'Source Sans Pro', sans-serif;
+$body-font: 'Montserrat', sans-serif;

@@ -9,3 +9,7 @@
 		@if $key == $bp
 			@media #{get-key($value, 'breakpoint')}
 			@content
+
+@mixin elevate($level)
+	z-index: #{$level}
+	box-shadow: 0 #{$level * 2}px #{$level * 2}px 0 rgba(0, 0, 0, 0.14), 0 #{$level * 1}px #{$level * 5}px 0 rgba(0, 0, 0, 0.12), 0 #{$level * 3}px #{$level * 1}px #{$level * -2}px rgba(0, 0, 0, 0.2)

@@ -1,2 +1,27 @@
-// Catamaran
-@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700|Roboto:400,700');
+// Import from Google
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Source+Sans+Pro:700')
+
+// Fonts
+h1, h2, h3 .header
+    font-family: $header-font
+
+// Sizing
+h1, .header
+    color: $theme-green
+    font-size: 2rem
+    font-weight: 700
+
+h2
+    font-size: 1.8rem
+    font-weight: 400
+
+p, a, li, span, .default-font
+    font-family: $body-font
+    font-size: $default-font-size
+    color: $theme-black
+
+a
+    text-decoration: none
+    transition: color .25s ease
+    &:hover
+        color: $theme-rose

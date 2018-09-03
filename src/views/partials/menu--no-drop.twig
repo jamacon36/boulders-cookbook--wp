@@ -1,0 +1,10 @@
+<ul class="menu menu--no-drop{% if submenu == 'true'%} submenu{% endif %}">
+    {% for item in menu %}
+    <li class="menu-item{% if item.classes %} {{item.classes|join(' ')}}{% endif %}">
+        <a href="{{item.get_link}}" class="menu-link"{% if item._menu_item_target %}  target="{{item._menu_item_target}}"{% endif %}>{{item.title}}</a>
+        {% if item.get_children %}
+        {% include "partials/menu--no-drop.twig" with {'menu': item.get_children, 'submenu': 'true'} %}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

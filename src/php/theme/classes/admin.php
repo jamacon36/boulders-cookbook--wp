@@ -18,7 +18,7 @@ class bouldersAdmin extends bouldersTheme
 
     // Remove Editor From Posts
     function remove_post_support() {
-        remove_post_type_support( 'page', 'editor' );
+        
     }
 
     // Normalize the look of custom metaboxes

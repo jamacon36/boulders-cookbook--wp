@@ -1,6 +1,6 @@
-<ul class="menu {% if submenu == 'true'%}dropdown-menu{% endif %}"{% if id %} id="dd_{{id}}" {% endif %}>
+<ul class="menu{% if submenu == 'true'%} dropdown-menu{% endif %}"{% if id %} id="dd_{{id}}"{% endif %}>
   {% for item in menu %}
-    <li class="menu-item {{item.classes | join(' ')}} ">
+    <li class="menu-item{% if item.classes %} {{item.classes|join(' ')}}{% endif %}">
       {% if item.get_children %}
       <a href="{{item.get_link}}" class="dropdown-button menu-link" data-activates="#dd_{{item.title|lower|replace({' ' : '-'})}}">{{item.title}}</a>
       {% include "partials/menu.twig" with {'menu': item.get_children, 'submenu': 'true', 'id': item.title|lower|replace({' ' : '-'})} %}

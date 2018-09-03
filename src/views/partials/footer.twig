@@ -1,4 +1,15 @@
-<footer class="page-footer">
-  
+<footer id="site-footer">
+  <div class="container">
+    <div class="grid">
+      <div class="grid-1of4">
+        <a href="/"><span class="header">The Boulders Cookbook</span></a>
+      </div>
+      <div class="grid-3of4">
+        <nav>
+          {% include 'partials/menu--no-drop.twig' with {'menu': primary_menu.get_items} %}
+        </nav>
+      </div>
+    </div>
+  </div>
   {{ wp_footer }}
 </footer>
