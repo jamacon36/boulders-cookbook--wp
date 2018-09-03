@@ -1,6 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 include 'theme/theme.php';
+include 'theme/classes/customFields.php';
 include 'theme/classes/timber.php';
 include 'theme/classes/admin.php';
 

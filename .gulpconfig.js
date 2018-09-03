@@ -22,7 +22,7 @@ const config = {
             dest: '/js'
         },
         php: {
-            src: `${src}/php/**/**.php`,
+            src: `${src}/php/**/**.*`,
             dest: ''
         },
         fonts: {

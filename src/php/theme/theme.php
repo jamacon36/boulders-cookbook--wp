@@ -39,6 +39,9 @@ class bouldersTheme
         
         // Initiate Timber
         new bouldersTimber();
+
+        // Initiate ACF
+        new themeCustomFields();
     }
 
     // Failed Login Redirect

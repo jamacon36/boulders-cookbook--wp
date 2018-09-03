@@ -52,11 +52,11 @@ class bouldersTimber extends TimberSite
                 if (is_array($params)) {
                     $params = array();
                     for ($i = 0; $i < count($params); $i++) {
-                        $params[$params[$i]] = xcellTheme::get_param($params[$i]);
+                        $params[$params[$i]] = bouldersTheme::get_param($params[$i]);
                     }
                     return $params;
                 } else {
-                    return xcellTheme::get_param($params);
+                    return bouldersTheme::get_param($params);
                 }
             }
 
