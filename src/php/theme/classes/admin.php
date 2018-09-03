@@ -51,9 +51,11 @@ class bouldersAdmin extends bouldersTheme
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
         if (!current_user_can( 'edit_post', $post_id )) return;
         
-        foreach ($_POST['meta'] as $meta) {
-            if (isset($_POST[$meta['key']])) {
-                update_post_meta( $post_id, $meta['key'], htmlentities($_POST[$meta['key']]) );
+        if (isset($_POST['meta'])) {
+            foreach ($_POST['meta'] as $meta) {
+                if (isset($_POST[$meta['key']])) {
+                    update_post_meta( $post_id, $meta['key'], htmlentities($_POST[$meta['key']]) );
+                }
             }
         }
     }

@@ -146,7 +146,7 @@ class bouldersTheme
 
     // Add Short Codes
     function short_codes() {
-        add_shortcode( 'button', array($this, 'button_sc') );
+
     }
 
     // Enforce Custom Scripts Version
@@ -182,7 +182,7 @@ class bouldersTheme
 
     // Add Custom Post Types
     function register_post_types() {
-
+        self::add_post_type('Recipie', 'Recipies', 'dashicons-carrot', 25, true, $add_support = ['title', 'editor', 'author', 'revisions', 'thumbnail']);
     }
 
     // Add Custom Taxonomies
