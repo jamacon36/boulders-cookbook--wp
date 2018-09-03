@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
 
   <head>{% include 'partials/head.twig' %}</head>
-  <body class="{{body_class}} page_{{ post.slug|replace('-','_') }} theme-default {{post.post_type}}{% block extra_body_classes %}{% endblock %}{% if check_query_args('login') == 'failed' or check_query_args('cell-line-transfer') %} u-scroll-lock{% endif %}{% if post.slug == 'shop-products' %} page-template-storefront{% endif %}" data-template="base.twig" id="post-{{post.ID}}">
+  <body class="{{body_class}} page_{{ post.slug|replace('-','_') }} theme-default {{post.post_type}}{% block extra_body_classes %}{% endblock %}" data-template="base.twig" id="post-{{post.ID}}">
     {% include 'partials/header.twig' %}
 
     {% block content %}{% endblock %}
